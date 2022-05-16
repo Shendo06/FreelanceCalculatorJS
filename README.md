@@ -1,1 +1,2 @@
 # FreelanceCalculatorJS
+Mini projet JS
