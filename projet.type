@@ -1,2 +1,0 @@
-<?php
-$projetType = array ('html', 'css', 'js');
