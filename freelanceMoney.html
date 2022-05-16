@@ -17,15 +17,15 @@
                 <Legend>Vos tarifs</Legend>
                 <div class="form-field" > 
                     <label for="TH">TH</label>
-                    <input name="TH" id="TH" type="number" placeholder="Ex : 70"/>
+                    <input class="form-control" name="TH" id="TH" type="number" placeholder="Ex : 70"/>
                 </div>
                 <div class="form-field"> 
                     <label for="TJM">TJM</label>
-                    <input name="TJM" id="TJM" type="number" placeholder="Ex : 490"/>
+                    <input class="form-control" name="TJM" id="TJM" type="number" placeholder="Ex : 490"/>
                 </div>
                 <div class="form-field"> 
                     <label for="Extras">Extras</label>
-                    <input name="Extras" id="Extras" type="number" placeholder="Ex : 47"/>
+                    <input class="form-control" name="Extras" id="Extras" type="number" placeholder="Ex : 47"/>
                 </div>
             </fieldset>
         </div>
@@ -34,15 +34,15 @@
                 <Legend>Quantités</Legend>
                 <div class="form-field" > 
                     <label for="QteTH">TH</label>
-                    <input name="QteTH" id="QteTH" type="number" placeholder="Ex : 7"/>
+                    <input class="form-control" name="QteTH" id="QteTH" type="number" placeholder="Ex : 7"/>
                 </div>
                 <div class="form-field"> 
                     <label for="QteTJM">TJM</label>
-                    <input name="QteTJM" id="QteTJM" type="number" placeholder="Ex : 1"/>
+                    <input class="form-control" name="QteTJM" id="QteTJM" type="number" placeholder="Ex : 1"/>
                 </div>
                 <div class="form-field"> 
                     <label for="QteExtras">Extras</label>
-                    <input name="QteExtras" id="QteExtras" type="number" placeholder="Ex : 5"/>
+                    <input class="form-control" name="QteExtras" id="QteExtras" type="number" placeholder="Ex : 5"/>
                 </div>
             </fieldset>
         </div>
@@ -51,13 +51,13 @@
                 <Legend>Charges</Legend>
                 <div class="form-field"> 
                     <label for="Charges">Charges</label>
-                    <input name="Charges" id="Charges" type="number" placeholder="Ex : 140"/>
+                    <input class="form-control" name="Charges" id="Charges" type="number" placeholder="Ex : 140"/>
                 </div>
             </fieldset>
 
         </div>
         <div class="sectionCalcul validation">
-            <button onclick="CalculGain();">Calculer</button>
+            <button id="btnValidation" >Calculer</button>
         </div>
         <div class="sectionCalcul result">
             <fieldset class="form-container">

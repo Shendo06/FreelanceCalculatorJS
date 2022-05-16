@@ -1,4 +1,7 @@
 function CalculGain(){
+  // on vérifie les inputs
+  CheckInputs();
+
   // on récupère le formulaire 
   let myForm = document.getElementById("formCalculGain");
   // on transforme le formulaire HTML en objet FormData
@@ -22,7 +25,6 @@ function CalculGain(){
   let gainExtras = extras * qteExtras;
 
   let totalBrut = gainHeure + gainJour + gainExtras;
-  
 
   let totalCharges = (totalBrut * (charges/100));
 
@@ -32,9 +34,34 @@ function CalculGain(){
 
 
 
-  // on remplis les champs de résultat -> ps ça ne fonctionne pas pour l'instant
+  // on remplis les champs de résultat
 
-  document.getElementById("totalBrut").innerText = totalBrut+" €";  
-  document.getElementById("totalCharges").innerText = totalCharges+" €";  
-  document.getElementById("totalNet").innerText = totalNet+" €";  
+  document.getElementById("totalBrut").innerText = totalBrut.toFixed(2)+" €";  
+  document.getElementById("totalCharges").innerText = totalCharges.toFixed(2)+" €";  
+  document.getElementById("totalNet").innerText = totalNet.toFixed(2)+" €";  
+};
+
+function CheckInputs(){
+  let mesInputs = document.querySelectorAll('#formCalculGain input.form-control');
+  mesInputs.forEach(monInput =>{
+    // vérifier si supèrieur à 0, sinon mettre à 0
+    if(monInput.value < 0){
+      monInput.value = 0;
+    }
+  });  
+};
+
+function saveFormInCookies(FormData){
+  
 }
+
+
+let btn = document.getElementById("btnValidation");
+btn.addEventListener('click', CalculGain);
+
+let mesInputs = document.querySelectorAll('#formCalculGain input.form-control');
+
+mesInputs.forEach(monInput =>{
+  monInput.addEventListener('keyup', CalculGain);
+  monInput.addEventListener('change', CalculGain);
+});
